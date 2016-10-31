@@ -19,11 +19,13 @@ The following examples are based on a Raspberry Pi 3 system. Adjust accordingly.
 
 ## Customization
 In order to customize the firmware base image, you can do after step (5.)
+
 1. Modify the kernel `make menuconfig`
 2. Save (accept suggested `.config` path)
 3. Update defconf `make savedefconfig` which will updated the `nerves_defconfig` file in `$NERVES_SYSTEM` directory.
 
 After customizing the system we have to rebuild:
+
 1. Rebuild the build config `./nerves_buildroot/create-build.sh ./nerves_system/nerves_defconfig rpi3_out`
 2. Switch dirs `cd /opt/rpi3_out`
 3. Build the code `make`
